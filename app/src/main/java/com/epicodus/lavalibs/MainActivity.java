@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
     public static final String TAG = MainActivity.class.getSimpleName();
     private Button button;
@@ -28,10 +30,12 @@ public class MainActivity extends AppCompatActivity {
                 String verb = editText1.getText().toString();
                 String adjective = editText2.getText().toString();
                 String noun = editText3.getText().toString();
-                Intent intent = new Intent(MainActivity.this, MadlibActivity.class);
-                intent.putExtra("verb", verb);
-                intent.putExtra("adjective", adjective);
-                intent.putExtra("noun", noun);
+                ArrayList<String> madlibs = new ArrayList<String>();
+                madlibs.add(noun);
+                madlibs.add(adjective);
+                madlibs.add(verb);
+            Intent intent = new Intent(MainActivity.this, MadlibActivity.class);
+                intent.putExtra("madlibs", madlibs);
                 startActivity(intent);
             }
         });
