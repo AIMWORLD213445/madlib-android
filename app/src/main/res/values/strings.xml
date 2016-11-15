@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">LavaLibsTitle</string>
+    <string name="welcome">"Welcome to the magmactivity that will make your day. Please fill out the following inputs."</string>
 </resources>
